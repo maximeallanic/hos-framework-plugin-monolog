@@ -14,7 +14,7 @@
     ],
     "autoload": {
         "psr-4":{
-            "Hos\\Plugin-Monolog": "src/"
+            "Hos\\Plugin\\Monolog": "src/"
         }
     },
      "require": {
@@ -30,9 +30,9 @@
     },
     "events": {
       "log": {
-        "info": "Hos\\Plugin-Monolog\\Info",
-        "warning": "Hos\\Plugin-Monolog\\Warning",
-        "error": "Hos\\Plugin-Monolog\\Error"
+        "info": "Hos\\Plugin\\Monolog::info",
+        "alert": "Hos\\Plugin\\Monolog::alert",
+        "error": "Hos\\Plugin\\Monolog::error"
       }
     }
 
