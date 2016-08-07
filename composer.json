@@ -1,8 +1,8 @@
 {
-    "name": "hos/plugin-twig-framework",
-    "description": "Twig Plugin Framework for Fast Developpement for PHP",
-    "keywords": [ "daehl", "hos", "framework", "twig" ],
-    "homepage": "https://github.com/daehl/hos-framework",
+    "name": "hos/plugin-monolog",
+    "description": "Monolog Plugin Framework for Hos",
+    "keywords": [ "daehl", "hos", "framework", "monolog" ],
+    "homepage": "https://github.com/mallanic/plugin-monolog-framework",
     "type": "library",
     "license": "CC0 1.0",
     "version": "1.0.0",
@@ -17,22 +17,17 @@
             "Hos\\Plugin\\Monolog": "src/"
         }
     },
-     "require": {
-        "monolog/monolog": "^1.18"
+    "require": {
+			"monolog/monolog": "dev-master"
     },
     "config": {
-      "dev": [
-        {
-          "file": "app/log/dev"
-        }
-      ],
-      "prod": false
+
     },
     "events": {
       "log": {
-        "info": "Hos\\Plugin\\Monolog::info",
-        "alert": "Hos\\Plugin\\Monolog::alert",
-        "error": "Hos\\Plugin\\Monolog::error"
+        "info": ["Hos\\Plugin\\Monolog\\Events::info"],
+				"alert": ["Hos\\Plugin\\Monolog\\Events::alert"],
+				"error": ["Hos\\Plugin\\Monolog\\Events::error"]
       }
     }
 
